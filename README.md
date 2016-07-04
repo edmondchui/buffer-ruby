@@ -40,6 +40,10 @@ export BUFFER_ACCESS_TOKEN="1/jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj" # (BufferApp OAu
 export BUFFER_PROFILE_ID="0"                                    # (default of 0)
 ```
 
+If you wish to post to multiple ids from the commandline, BUFFER_PROFILE_ID accepts a
+comma delimited array of integers, ie `BUFFER_PROFILE_ID="0,1"`. This will post to both
+0 and 1 index in your profiles list.
+
 ## Access Token Instructions
 
 #### How to Get Started:
