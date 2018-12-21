@@ -7,20 +7,23 @@ module Buffer
     include Link
     include Info
 
-    attr_accessor :access_token
+    attr_accessor :access_token, :connection
+
+    URL = 'https://api.bufferapp.com/1/'.freeze
 
     def initialize(access_token)
       @access_token = access_token
-      url = "https://api.bufferapp.com/1/"
-      @connection = Faraday.new(url: url) do |faraday|
-        faraday.request  :url_encoded
-        faraday.adapter  Faraday.default_adapter
+    end
+
+    def connection
+      @connection ||= Faraday.new(url: URL) do |faraday|
+        faraday.request :url_encoded
+        faraday.adapter Faraday.default_adapter
       end
     end
 
     def auth_query
       { access_token: @access_token }
     end
-
   end
 end
