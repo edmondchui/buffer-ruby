@@ -13,6 +13,12 @@ describe Buffer::Client do
     end
   end
 
+  describe "#connection" do
+    it "assigns the connection instance variable" do
+      subject.connection.should eq(subject.instance_variable_get(:@connection))
+    end
+  end
+
   describe "#info" do
     before do
       stub_request(:get, "#{base_path}/info/configuration.json?access_token=some_token").
