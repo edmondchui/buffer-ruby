@@ -7,7 +7,7 @@ module Buffer
     include Link
     include Info
 
-    attr_accessor :access_token, :connection
+    attr_accessor :access_token
 
     URL = 'https://api.bufferapp.com/1/'.freeze
 
