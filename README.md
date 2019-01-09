@@ -2,9 +2,6 @@
 
 buffer is a Buffer API Wrapper written in Ruby.  It provides more thorough API coverage than the existing gem.
 
-Since the gem is currently in ALPHA development, the interface is prone to change.  Please wait until v0.1.0 is released to become reliant on interface. As it stands, all of the basic API calls in BufferApp's spec are available.  Some of the optional params are yet to be implemented.
-
-
 ## Installation
 
 [![Coverage Status](https://coveralls.io/repos/zph/buff/badge.png?branch=master)](https://coveralls.io/r/zph/buff?branch=master) [![Build Status](https://travis-ci.org/zph/buff.png?branch=master)](https://travis-ci.org/zph/buff) [![Code Climate](https://codeclimate.com/github/zph/buff.png)](https://codeclimate.com/github/zph/buff)
@@ -53,7 +50,7 @@ comma delimited array of integers, ie `BUFFER_PROFILE_ID="0,1"`. This will post 
 * Submit that form and wait a short period (~2 min )
 * Visit: http://bufferapp.com/developers/apps
 * Gather Access Token and place it after the word "access_token"
-* Set BUFFER_PROFILE_ID="0" if you only have one account to post to. Otherwise it's more complicated ;). Find me on Twitter and I can explain [@_ZPH](https://twitter.com/_ZPH).
+* Set BUFFER_PROFILE_ID="0" if you only have one account to post to. Otherwise it's more complicated ;).
 
 #### Example
 
